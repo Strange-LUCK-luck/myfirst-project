@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pointer{
+            cursor:pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="../resource/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0px;">
+        <div class="container">
+            <h1 class="display-4 text-center">我的购物车</h1>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">首页</a></li>
+                    <li class="breadcrumb-item"><a href="#">商品列表</a></li>
+                    <li class="breadcrumb-item active"><a href="">我的购物车</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container" id="gouwuche" style="padding-bottom: 5rem;">
+        <ul class="list-group" id="head">
+            
+        </ul>
+        <ul class="list-group" id="shoplist">
+
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="padding-left: 3.7rem;">
+                <div>
+                    <span id="zongji">总计:</span>
+                    <span></span>
+                </div>
+                <span class="pointer dongzuo">结算</span>
+            </li>
+        </ul>
+    </div>
+    <script src="../js/shop.js"></script>
+</body>
+
+</html>
