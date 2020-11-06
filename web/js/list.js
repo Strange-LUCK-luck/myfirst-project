@@ -17,7 +17,7 @@
     // 获取search检查是否是登录过来
     var searchname = window.location.search;
     // console.log(countlist);
-    List(yemianlist, countlist,searchname);
+    List(yemianlist, countlist, searchname);
     Get(listbox, countlist, function () {});
     // 定义一个get请求函数 渲染数据
     function Get(box, countlist, obj) {
@@ -34,7 +34,7 @@
                   <div class="card mb-5 ml-3" style="max-width: 440px;">
                   <div class="row no-gutters">
                     <div class="col-md-4 d-flex" style="align-items: center;">
-                      <img src="${value.goods_small_logo}" class="card-img-top">
+                      <img src="${value.goods_small_logo}" class="card-img-top imges">
                     </div>
                     <div class="col-md-8">
                       <div class="card-body d-flex justify-content-lg-between flex-column">
@@ -57,7 +57,7 @@
         xhr.send();
     }
     // 定义一个页底的函数  跟着页面变化
-    function List(yemianlist, countlist,searchname) {
+    function List(yemianlist, countlist, searchname) {
         var yemianlist = yemianlist;
         var countlist = countlist - 1;
         for (let i in yemianlist) {
@@ -79,7 +79,7 @@
             return;
         }
         var yemianlist = document.getElementsByClassName("yemianlist");
-        List(yemianlist, countlist,searchname);
+        List(yemianlist, countlist, searchname);
         listbox.innerHTML = "";
         Get(listbox, countlist, function () {});
     };
@@ -92,7 +92,7 @@
             return
         }
         var yemianlist = document.getElementsByClassName("yemianlist");
-        List(yemianlist, countlist,searchname);
+        List(yemianlist, countlist, searchname);
         listbox.innerHTML = "";
         Get(listbox, countlist, function () {});
     }
@@ -122,7 +122,7 @@
             var cl = parseInt(location.hash.slice(1)) || 0;
             var cl1 = cl - 1;
             listbox.innerHTML = "";
-            List(yemianlist, cl1,searchname);
+            List(yemianlist, cl1, searchname);
             Get(listbox, cl1, function () {});
             console.log(cl)
         }
@@ -158,5 +158,4 @@
             }
         }
     });
-
 })();

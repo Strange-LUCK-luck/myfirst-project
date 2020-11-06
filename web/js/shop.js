@@ -6,6 +6,7 @@
     var gouwuche = document.getElementById("gouwuche");
     var zong = document.getElementById("zongji");
     var head = document.getElementById("head");
+    var searchname = window.location.search;
 
     if (!username) {
         alert("请登录");
@@ -70,7 +71,7 @@
             listbox.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-center">
        <input id="shopcheck" data-goodsid="${value.goods_id}" type="checkbox" ${value.isChecked ? "checked" : ""}>
        <img src="${value.goods_small_logo}" alt="" style="height: 4rem;">
-       <p style="width: 25rem;"><a href="" style="color:black;">${value.goods_name}</a><span style="display:block;color:red">${value.goods_price}</span></p>
+       <p style="width: 25rem;"><a href="./xiangqing.html${searchname}#${value.goods_id}" style="color:black;">${value.goods_name}</a><span style="display:block;color:red">${value.goods_price}</span></p>
        <div>
            <span class="badge badge-primary badge-pill pointer" id="jian" data-goodsid="${value.goods_id}">-</span>
            <span class="badge badge-primary badge-pill">${value.count}</span>
